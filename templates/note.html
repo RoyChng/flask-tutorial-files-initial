@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Note</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <a class="back" href="/"> < Back </a>
+        <h1>Note #111</h1>
+      </header>
+      <form class="note__form" action="/note/1" method="POST">
+        <label for="title"> Title </label>
+        <input type="text" name="title" id="title" value="Note Title" />
+        <label for="content"> Content </label>
+        <textarea type="text" name="content" id="content" rows="10">Note Content</textarea>
+        <button class="note__form-btn--primary">Update</button>
+      </form>
+      <form class="note__form" action="/delete-note/1" method="POST">
+        <button class="note__form-btn--secondary">Delete</button>
+      </form>
+    </main>
+  </body>
+</html>

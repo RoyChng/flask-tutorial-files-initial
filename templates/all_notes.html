@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Notes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>All Notes</h1>
+        <a class="create-note" href="/create-note">Create</a>
+      </header>
+      <div class="note__grid">
+        <a class="note__link" href="/note/1">
+          <div class="note">
+            <div class="note__content">
+              <p>Note Content</p>
+            </div>
+            <div class="note__title">Note title</div>
+          </div>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
